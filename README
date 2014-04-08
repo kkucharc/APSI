@@ -1,0 +1,39 @@
+
+
+    Cel i przeznaczenie systemu
+
+System ma być przeznaczony dla firmy świadczącej usługi z zakresu wytwarzania produktów IT. Skierowany jest do wszystkich zatrudnionych w firmie, z głównym wskazaniem na pracowników technicznych (developerów, testerów, etc), analityków i kierowników projektów. System ma za zadanie wspomaganie zarządzania projektami oraz zasobami niezbędnymi do ich wytwarzania. Ma umożliwiać stałe monitorowanie postępów projektu. Ma zapeniać możliwość szybkiej reakcji na zmiany (odejście/choroba pracownika, wcześniejsze/późniejsze zakończenie projektu).
+
+    Wymagania
+
+        Tworzenie zespołów i zarządzanie nimi
+
+        Zarządzanie projektami:
+
+            zdefiniowanie wymagań dotyczących projektu (technologia - niezbędna do wybrania kwalifikujących się pracowników, skala - jak rozbudowany będzie projekt co ma wspomóc w estymacji niezbędnych zasobów ludzkich, czas realizacji, przeznaczony budżet)
+
+        Zarządzanie harmonogramem zaangażowania w projekty/zadania, raportowanie,
+
+        Zarządzanie kompetencjami (wiedza, umiejętności, doświadczenie deklarowane i potwierdzone, etc.):
+
+            (opcjonalnie) baza kompetencji personelu z mechanizmami wyszukiwania i generowania raportów i zestawień,
+
+            kompetencje w projekcie / zespole określone jako wymagane/pokryte/do pozyskania,
+
+            (opcjonalnie) wsparcie dla kadr i rekrutacji: generowanie profili kandydatów, zapotrzebowanie na szkolenia i certyfikaty,
+
+        Zarządzanie przydziałem pracowników do projektów (zapotrzebowanie, prealokacja, alokacja, realokacja, zwolnienie, etc.):
+
+            zasady zwierzchności i podległości.
+
+        Walidacja (w formie informowania przełożonych/project managerów w razie przekroczenia założeń):
+
+            czasu pracy w miesiącu,
+
+            budżetu, czy nie jest przekroczony
+
+            czasu pracy w projekcie (łącznie)
+
+        Analiza zaawansowania prac projektów
+            monitoring postępów w projekcie, oraz wkładu poszczególnych pracowników w realizacje (performance projektu)
+
