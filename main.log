@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.4.7)  23 APR 2014 23:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.4.7)  24 APR 2014 17:21
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -324,7 +324,7 @@ Package: mdwlist 1996/05/02 1.1 Various list-related things
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 ) (./main.aux
-(./tex/01_analiza_wymagan.aux))
+(./tex/01_analiza_wymagan.aux) (./tex/02_przypadki_uzycia.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -375,36 +375,42 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-) [2
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10.95> on input line 13.
 
-]
+Overfull \hbox (209.83124pt too wide) in paragraph at lines 13--40
+[][] 
+ []
+
+[2
+
+]) [3]
 \openout2 = `./tex/02_przypadki_uzycia.aux'.
 
+ (./tex/02_przypadki_uzycia.tex) [4
 
-(./tex/02_przypadki_uzycia.tex) [3
 
-
-] (./main.aux (./tex/01_analiza_wymagan.aux)
-(./tex/02_przypadki_uzycia.aux)) ) 
+] (./main.aux
+(./tex/01_analiza_wymagan.aux) (./tex/02_przypadki_uzycia.aux)) ) 
 Here is how much of TeX's memory you used:
- 1348 strings out of 495026
- 14926 string characters out of 1181803
- 63170 words of memory out of 3000000
- 4515 multiletter control sequences out of 15000+50000
- 13785 words of font info for 34 fonts, out of 3000000 for 9000
+ 1355 strings out of 495026
+ 15072 string characters out of 1181803
+ 70170 words of memory out of 3000000
+ 4519 multiletter control sequences out of 15000+50000
+ 14447 words of font info for 36 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
- 31i,6n,26p,309b,206s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/kasiaonthepole/.texmf-var/fonts/pk/lj
-four/jknappen/ec/ecbx1095.600pk> </home/kasiaonthepole/.texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecbx1200.600pk> </home/kasiaonthepole/.texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecbx1440.600pk> </home/kasiaonthepole/.texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecrm1095.600pk> </home/kasiaonthepole/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecrm1200.600pk> </home/kasiaonthepole/.texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecrm1728.600pk></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb>
-Output written on main.pdf (3 pages, 67205 bytes).
+ 31i,6n,26p,307b,206s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/kasiao
+nthepole/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/kasiaont
+hepole/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/kasiaonthe
+pole/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/kasiaonthepo
+le/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/kasiaonthepole
+/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/kasiaonthepole/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (4 pages, 72916 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 206 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
