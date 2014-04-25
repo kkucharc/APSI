@@ -23,7 +23,7 @@ Scenariusz alternatywny - błędne dane:
 \begin{enumerate}
 \item Aktor wprowadza swoje login i hasło
 \item System uznaje zapytanie za błędne
-\item System wyświetla ekran informujacy o błędnym loginie lub haśle
+\item System wyświetla ekran informujacy o błędnym loginie lub haśle 
 \end{enumerate}
 
 \item Dodanie/edycja profilu użytkownika \\
@@ -242,7 +242,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera interesujący go projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera utworzenie nowego zadania.
 \item System wyświetla formularz z pustymi polami (Nazwa zadania,opis, data początkowa, data końcowa, szacowane koszty, status)
 \item Aktor uzupełnia puste pola i zatwierdza.
@@ -271,7 +271,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera interesujący go projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera modyfikację zadania.
 \item System wyświetla formularz z danymi zadania.
 \item Aktor zmienia dane i zatwierdza.
@@ -300,7 +300,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera interesujący go projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera usunięcie zadania.
 \item System wyświetla komunikat w celu potwierdzenia usunięcia.
 \item Aktor zatwierdza wybór.
@@ -328,7 +328,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera zadanie do którego chce dodać loga.
 \item System wyświetla listę logów należących do zadania.
 \item Aktor wybiera dodanie nowego loga.
@@ -359,7 +359,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera zadanie.
 \item System wyświetla listę logów należących do zadania.
 \item Aktor wybiera modyfikację loga.
@@ -390,7 +390,7 @@ Warunki końcowe:
 Scenariusz główny:
 \begin{enumerate}
 \item Aktor wybiera projekt.
-\item System wyświetla listę zadań należących do projektu.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
 \item Aktor wybiera zadanie.
 \item System wyświetla listę logów należących do zadania.
 \item Aktor wybiera usunięcie loga.
@@ -403,6 +403,165 @@ Scenariusz alternatywny - brak potwierdzenia usunięcia loga:
 \item Jak a-d w scenariuszu głównym
 \item Aktor nie zatwierdza wyboru.
 \item System zwraca poprzedni widok zadania.
+\end{enumerate}
+
+\item Przypisanie pracownika do projektu \\
+Nazwa: UC15 Przypisanie pracownika do projektu \\
+Opis: Proces przypisanie pracownika do projektu \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item Do projektu nie ma przypisanego pracownika technicznego.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Do projektu jest przypisany pracownik techniczny.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera projekt.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
+\item Aktor wybiera dodanie pracownika do projektu.
+\item System wyświetla listę pracowników.
+\item Aktor wybiera pracownika i zatwierdza.
+\item System zwraca widok projektu z odświeżoną listę pracowników.
+\end{enumerate}
+Scenariusz alternatywny - pracownik niedostępny: 
+\begin{enumerate}
+\item Jak a-e w scenariuszu głównym
+\item System informuje że pracownik jest niedostępny.
+\item System zwraca poprzedni widok projektu.
+\end{enumerate}
+
+\item Usunięcie pracownika z projektu \\
+Nazwa: UC16 Usunięcie pracownika z projektu \\
+Opis: Proces usunięcia pracownika z projektu \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item Do projektu jest przypisany pracownik techniczny.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Do projektu nie ma przypisanego pracownika technicznego.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera projekt.
+\item System wyświetla listę zadań należących do projektu, listę pracowników przypisanych do projektu oraz dane projektu.
+\item Aktor wybiera pracownika z listy pracowników przypisanych do projektu.
+\item Aktor wybiera usunięcie pracownika.
+\item System wyświetla komunikat w celu potwierdzenia usunięcia.
+\item Aktor zatwierdza wybór.
+\item System zwraca widok projektu z odświeżoną listę pracowników.
+\end{enumerate}
+Scenariusz alternatywny - pracownik niedostępny: 
+\begin{enumerate}
+\item Jak a-e w scenariuszu głównym
+\item Aktor nie potwierdza usunięcia.
+\item System zwraca poprzedni widok projektu.
+\end{enumerate}
+
+\item Zatwierdzenie raportu pracownika \\
+Nazwa: UC17 Zatwierdzenie raportu pracownika \\
+Opis: Proces zatwierdzenia raportu pracownika \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie znajdują się logi pracownika nie zaakceptowane przez kierownika projektu.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie znajdują się logi pracownika zaakceptowane przez kierownika projektu.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera opcję wyświetlenia logów projektu.
+\item Aktor wybiera projekt z listy.
+\item System wyświetla logi wprowadzone przez wszystkich pracowników należących do projektu.
+\item Aktor wybiera opcję aktualizacji statusu loga.
+\item System wyświetla komunikat w celu potwierdzenia zatwierdzenia loga.
+\item Aktor zatwierdza wybór.
+\item System zwraca widok logów projektu.
+\end{enumerate}
+Scenariusz alternatywny - brak potwierdzenia: 
+\begin{enumerate}
+\item Jak a-e w scenariuszu głównym
+\item Aktor nie wyraża zgody na zatwierdzenie.
+\item Jak g w scenariuszu głównym.
+\end{enumerate}
+
+\item Złożenie wniosku o urlop pracownika \\
+Nazwa: UC18 Złożenie wniosku o urlop pracownika \\
+Opis: Złożenie wniosku o urlop pracownika \\
+Aktorzy: Pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item Pracownik chce wziąć urlop.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie jest złożony wniosek o urlop.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera składanie wzniosków o urlop.
+\item System wyświetla formularz wniosku.
+\item Aktor wypełania wniosek i zatwierdza.
+\item System wyświetla informację, o tym, że wniosek został poprawnie złożony.
+\end{enumerate}
+Scenariusz alternatywny - wniosek niepoprawny: 
+\begin{enumerate}
+\item Jak a-c w scenariuszu głównym
+\item System wyświetla informację, o tym, że wniosek zawiera błędy.
+\item Aktor poprawia wniosek i zatwierdza.
+\item Jak d w scenariuszu głównym.
+\end{enumerate}
+
+\item Przyjęcie wniosku o urlop pracownika \\
+Nazwa: UC19 Przyjęcie wniosku o urlop pracownika \\
+Opis: Przyjęcie wniosku o urlop pracownika \\
+Aktorzy: HR \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie jest wniosek o urlop.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie jest informacja o przyznaniu urlopu.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera z wniosek z listy.
+\item System wyświetla formularz wniosku.
+\item Aktor zatwierdza zgodę na przyznanie urlopu.
+\item System wyświetla informację, o tym, że wniosek został przyjęty.
+\end{enumerate}
+Scenariusz alternatywny - wniosek nieprzyznany: 
+\begin{enumerate}
+\item Jak a-b w scenariuszu głównym
+\item System wyświetla informację, o tym, że wniosek zawiera błędy.
+\item Aktor nie zatwierdza zgody na przyznanie urlopu.
+\item System wyświetla informację, o tym, że wniosek nie został przyjęty.
+\end{enumerate}
+
+\item Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
+Nazwa: UC20 Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
+Opis: Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W projekcie nastąpił problem krytyczny (przekroczenie terminu wykonania, przekroczenia kosztów).
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie jest informacja o tym, że kierownik projektu otrzymał stosowny komunikat.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item System wyświetla komunikat o sytuacji krytycznej.
+\item Aktor potwierdza przeczytanie komunikatu.
+\item System wyświetla standardowy widok.
 \end{enumerate}
 
 \end{enumerate}
