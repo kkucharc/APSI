@@ -545,9 +545,64 @@ Scenariusz alternatywny - wniosek nieprzyznany:
 \item System wyświetla informację, o tym, że wniosek nie został przyjęty.
 \end{enumerate}
 
-\subsection{Ostrzeganie przed sytuacjami krytycznymi w projekcie}
+\subsection{Generowanie raportu dotyczącego pracownika}
+Nazwa: UC20 Generowanie raportu dotyczącego pracownika \\
+Opis: Generowanie raportu dotyczącego pracownika \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie znajdują się logi umieszczone w zadaniach
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Raport zapisany pliku na dysku komputera.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera z listy pracownika.
+\item Aktor podaje przedział czasowy.
+\item System wyświetla wszystkie logi pracownika dla przedziału czasowego.
+\item Aktor wybiera generowanie raportu.
+\item System generuje raport i zapisuje go na dysku komputera.
+\item System potwierdza wygenerowanie raportu.
+\end{enumerate}
+Scenariusz alternatywny - brak logów dla pracownika: 
+\begin{enumerate}
+\item Jak a-b w scenariuszu głównym
+\item System wyświetla informację, o tym, że nie ma logów dla pracownika w podanym przedziale czasowym.
+\end{enumerate}
 
-Nazwa: UC20 Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
+
+\subsection{Generowanie raportu dotyczącego projektu}
+Nazwa: UC21 Generowanie raportu dotyczącego projektu \\
+Opis: Proces generowania raportu dotyczącego projektu \\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie znajdują się logi umieszczone w zadaniach przypisanych do projektów
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Raport zapisany pliku na dysku komputera.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera z listy projekt.
+\item Aktor podaje przedział czasowy.
+\item System wyświetla wszystkie logi dla projektu dla zadanego przedziału czasowego.
+\item Aktor wybiera generowanie raportu.
+\item System generuje raport i zapisuje go na dysku komputera.
+\item System potwierdza wygenerowanie raportu.
+\end{enumerate}
+Scenariusz alternatywny - brak logów dla projektu: 
+\begin{enumerate}
+\item Jak a-b w scenariuszu głównym
+\item System wyświetla informację, o tym, że nie ma logów dla projektu w podanym przedziale czasowym.
+\end{enumerate}
+
+
+\subsection{Ostrzeganie przed sytuacjami krytycznymi w projekcie}
+Nazwa: UC22 Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
 Opis: Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
 Aktorzy: Kierownik projektu \\
 Warunki początkowe:
@@ -564,3 +619,4 @@ Scenariusz główny:
 \item Aktor potwierdza przeczytanie komunikatu.
 \item System wyświetla standardowy widok.
 \end{enumerate}
+
