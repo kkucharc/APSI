@@ -4,7 +4,7 @@ Wszelkie przypadki użycia posiadają warunek poprawnego przejścia scenariusza 
 \subsection{Autoryzacja użytkownika} 
 Nazwa: UC1 Autoryzacja użytkownika \\
 Opis: Proces logowania się pracownika \\
-Aktorzy: Uzytkownik \\
+Aktorzy: Użytkownik \\
 Warunki początkowe: 
 \begin{itemize}
 \item Istniejące konto w systemie 
@@ -23,7 +23,7 @@ Scenariusz alternatywny - błędne dane:
 \begin{enumerate}
 \item Aktor wprowadza swoje login i hasło
 \item System uznaje zapytanie za błędne
-\item System wyświetla ekran informujacy o błędnym loginie lub haśle 
+\item System wyświetla ekran informujący o błędnym loginie lub haśle 
 \end{enumerate}
 
 \subsection{Dodanie/edycja profilu użytkownika}
@@ -75,7 +75,7 @@ Warunki początkowe:
 \end{itemize}
 Warunki końcowe: 
 \begin{itemize}
-\item Zauktualizowana baza danych pozbawiona nieporządanego konta
+\item Zaktualizowana baza danych pozbawiona nieporządanego konta
 \end{itemize}
 Scenariusz główny:
 \begin{enumerate}
@@ -87,7 +87,7 @@ Scenariusz główny:
 Scenariusz alternatywny - błąd usuwania: 
 \begin{enumerate}
 \item Jak a-b w scenariuszu głównym
-\item System wykrywa błęd podczas usuwania rekordu
+\item System wykrywa błąd podczas usuwania rekordu
 \item System zwraca pierwotną listę z informacją z błędem usuwania
 \end{enumerate}
 
@@ -109,12 +109,12 @@ Scenariusz główny:
 \item System wyświetla detale profilu użytkownika
 \item Aktor wybiera odpowiednią opcję ról i zatwierdza
 \item System zmienia rekord dotyczący ról dla danego konta
-\item System zwraca widok profilu użytkowanika z nowymi prawami dostępu
+\item System zwraca widok profilu użytkownika z nowymi prawami dostępu
 \end{enumerate}
 Scenariusz alternatywny - błąd zmiany : 
 \begin{enumerate}
 \item Jak a-c w scenariuszu głównym
-\item System wykrywa kolizję lub bład połączenia
+\item System wykrywa kolizję lub błąd połączenia
 \item System wyświetla detale profilu użytkownika wraz z kodem błędu, który wystąpił
 \end{enumerate}
 
@@ -136,7 +136,7 @@ Scenariusz główny:
 \item System wyświetla detale profilu użytkownika
 \item Aktor wybiera użytkownika który ma być zwierzchnikiem dla edytowanego użytkownika
 \item System zmienia rekord dotyczący zwierzchnika
-\item System zwraca nowy widok profilu użytkowanika
+\item System zwraca nowy widok profilu użytkownika
 \end{enumerate}
 Scenariusz alternatywny - wykrycie pętli: 
 \begin{enumerate}
@@ -262,11 +262,11 @@ Opis: Proces odpowiedzialny za modyfikację zadania\\
 Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
 Warunki początkowe:
 \begin{itemize}
-\item W systemie istnieje zadanie nalezące do projektu.
+\item W systemie istnieje zadanie należące do projektu.
 \end{itemize}
 Warunki końcowe:
 \begin{itemize}
-\item W systemie istnieje zmienione zadanie nalezące do projektu.
+\item W systemie istnieje zmienione zadanie należące do projektu.
 \end{itemize}
 Scenariusz główny:
 \begin{enumerate}
@@ -291,7 +291,7 @@ Opis: Proces odpowiedzialny za usunięcie zadania\\
 Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
 Warunki początkowe:
 \begin{itemize}
-\item W systemie istnieje zadanie nalezące do projektu.
+\item W systemie istnieje zadanie należące do projektu.
 \end{itemize}
 Warunki końcowe:
 \begin{itemize}
@@ -354,7 +354,7 @@ Warunki początkowe:
 \end{itemize}
 Warunki końcowe:
 \begin{itemize}
-\item W systemie istnije zmodyfikowany log.
+\item W systemie istnieje zmodyfikowany log.
 \end{itemize}
 Scenariusz główny:
 \begin{enumerate}
@@ -505,9 +505,9 @@ Warunki końcowe:
 \end{itemize}
 Scenariusz główny:
 \begin{enumerate}
-\item Aktor wybiera składanie wzniosków o urlop.
+\item Aktor wybiera składanie wniosków o urlop.
 \item System wyświetla formularz wniosku.
-\item Aktor wypełania wniosek i zatwierdza.
+\item Aktor wypełnia wniosek i zatwierdza.
 \item System wyświetla informację, o tym, że wniosek został poprawnie złożony.
 \end{enumerate}
 Scenariusz alternatywny - wniosek niepoprawny: 
