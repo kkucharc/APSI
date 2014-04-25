@@ -26,7 +26,7 @@ Scenariusz alternatywny - błędne dane:
 \item System wyświetla ekran informujacy o błędnym loginie lub haśle
 \end{enumerate}
 
-\item Dodanie/edycja profilu użytkownika
+\item Dodanie/edycja profilu użytkownika \\
 Nazwa: UC2 Dodanie/edycja profilu użytkownika \\
 Opis: Proces dodania/edycji profilu dla pracownika \\
 Aktorzy: HR \\
@@ -48,24 +48,24 @@ Scenariusz główny:
 \end{enumerate}
 Scenariusz alternatywny - walidacja danych: 
 \begin{enumerate}
-\item a-c jak w scenariuszu głównym
+\item Jak a-c jak w scenariuszu głównym
 \item System wykrywa błędnie wpisane dane 
 \item System zwraca formularz z zaznaczonymi błędnymi polami
 \end{enumerate}
 Scenariusz alternatywny - utrata łączności: 
 \begin{enumerate}
-\item a-c jak w scenariuszu głównym
+\item Jak a-c jak w scenariuszu głównym
 \item System ma problem z łącznością 
 \item System wyświetla formularz, wraz z informacją o nie zapisaniu danych spowodowanych problemem łączności
 \end{enumerate}
 Scenariusz alternatywny - kolizja transakcji: 
 \begin{enumerate}
-\item a-c jak w scenariuszu głównym
+\item Jak a-c jak w scenariuszu głównym
 \item System wykrywa błąd transakcji (np. zakleszczenie)
 \item System wyświetla formularz, wraz z prośbą o ponowienie zapytania
 \end{enumerate}
 
-\item Usuwanie profilu użytkownika
+\item Usuwanie profilu użytkownika \\
 Nazwa: UC3 Usuwanie profilu użytkownika \\
 Opis: Proces usuwania profilu dla pracownika \\
 Aktorzy: HR lub Administrator \\
@@ -86,7 +86,7 @@ Scenariusz główny:
 \end{enumerate}
 Scenariusz alternatywny - błąd usuwania: 
 \begin{enumerate}
-\item a-b jak w scenariuszu głównym
+\item Jak a-b jak w scenariuszu głównym
 \item System wykrywa błęd podczas usuwania rekordu
 \item System zwraca pierwotną listę z informacją z błędem usuwania
 \end{enumerate}
@@ -113,7 +113,7 @@ Scenariusz główny:
 \end{enumerate}
 Scenariusz alternatywny - błąd zmiany : 
 \begin{enumerate}
-\item a-c jak w scenariuszu głównym
+\item Jak a-c jak w scenariuszu głównym
 \item System wykrywa kolizję lub bład połączenia
 \item System wyświetla detale profilu użytkownika wraz z kodem błędu, który wystąpił
 \end{enumerate}
@@ -140,37 +140,269 @@ Scenariusz główny:
 \end{enumerate}
 Scenariusz alternatywny - wykrycie pętli: 
 \begin{enumerate}
-\item a-c jak w scenariuszu głównym
+\item Jak a-c jak w scenariuszu głównym
 \item System wykrywa pętle w drzewie hierarchii
 \item System wyświetla informacje o błędzie
 \end{enumerate}
 
-\item Zalogowanie czasu pracy przez pracownika \\
-Nazwa: UC6 Zalogowanie czasu pracy przez pracownika \\
-Opis: Proces dodania informacji o tym, czym zajmował się pracownik, kiedy to robił i ile czasu na to poświęcił \\
-Aktorzy: Pracownik techniczny \\
+\item Tworzenie projektu \\
+Nazwa: UC6 Tworzenie projektu\\
+Opis: Proces odpowiedzialny za tworzenie projektu\\
+Aktorzy: Kierownik projektu \\
 Warunki początkowe:
 \begin{itemize}
-\item Brak zalogowanych informacji z danego dnia, mogą istnieć logi z innych dat, bądź innych użytkowników.
+\item Brak projektu w systemie.
 \end{itemize}
 Warunki końcowe:
 \begin{itemize}
-\item Zalogowane w odpowienim zadaniu informacje.
+\item Nowy projekt w systemie, bez stworzonych zadań.
 \end{itemize}
 Scenariusz główny:
 \begin{enumerate}
+\item Aktor wybiera utworzenie nowego projektu.
+\item System wyświetla formularz z pustymi polami (Nazwa projektu, opis, data początkowa, data końcowa, status)
+\item Aktor uzupełnia puste pola i zatwierdza.
+\item System zwraca nowy widok z projektami, gdzie pojawia się nowo dodany projekt.
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych projektu: 
+\begin{enumerate}
+\item Jak a-c jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item Jak d w scenariuszu głównym
+\end{enumerate}
+
+\item Modyfikacja projektu \\
+Nazwa: UC7 Modyfikacja projektu\\
+Opis: Proces odpowiedzialny za modyfikację projektu\\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie istnieje projekt.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Zmodyfikowany projekt w systemie.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera modyfikację projektu.
+\item System wyświetla formularz z danymi projektu
+\item Aktor zmienia pola i zatwierdza.
+\item System zwraca nowy widok z projektami.
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych modyfikowanego projektu: 
+\begin{enumerate}
+\item Jak a-c jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item Jak d w scenariuszu głównym
+\end{enumerate}
+
+
+\item Usunięcie projektu \\
+Nazwa: UC8 Usunięcie projektu\\
+Opis: Proces odpowiedzialny za usunięcie projektu\\
+Aktorzy: Kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie istnieje projekt.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie nie ma projektu.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera usunięcie projektu.
+\item System wyświetla komunikat w celu potwierdzenia usunięcia.
+\item Aktor zatwierdza wybór.
+\item System zwraca widok z projektami.
+\end{enumerate}
+Scenariusz alternatywny - brak potwierdzenia: 
+\begin{enumerate}
+\item Jak a-b jak w scenariuszu głównym
+\item Aktor nie potwierdza usunięcia.
+\item Jak d w scenariuszu głównym
+\end{enumerate}
+
+
+\item Tworzenie zadania \\
+Nazwa: UC9 Tworzenie zadania\\
+Opis: Proces odpowiedzialny za tworzenie zadania\\
+Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie nie ma informacji o zadaniu, należącym do projektu.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Nowy utworzone zadanie należące do projektu.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera interesujący go projekt.
+\item System wyświetla listę zadań należących do projektu.
+\item Aktor wybiera utworzenie nowego zadania.
+\item System wyświetla formularz z pustymi polami (Nazwa zadania,opis, data początkowa, data końcowa, szacowane koszty, status)
+\item Aktor uzupełnia puste pola i zatwierdza.
+\item System zwraca nowy widok z projektem w którym pojawia się nowo utworzone zadanie.
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych zadania: 
+\begin{enumerate}
+\item Jak a-e jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item Jak f w scenariuszu głównym
+\end{enumerate}
+
+\item Modyfikacja zadania \\
+Nazwa: UC10 Modyfikacja zadania\\
+Opis: Proces odpowiedzialny za modyfikację zadania\\
+Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie istnieje zadanie nalezące do projektu.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie istnieje zmienione zadanie nalezące do projektu.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera interesujący go projekt.
+\item System wyświetla listę zadań należących do projektu.
+\item Aktor wybiera modyfikację zadania.
+\item System wyświetla formularz z danymi zadania.
+\item Aktor zmienia dane i zatwierdza.
+\item System zwraca nowy widok z projektem w którym pojawia się zmodyfikowane zadanie.
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych zadania modyfikowanego: 
+\begin{enumerate}
+\item Jak a-e jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item Jak f w scenariuszu głównym
+\end{enumerate}
+
+\item Usunięcie zadania \\
+Nazwa: UC11 Usunięcie zadania\\
+Opis: Proces odpowiedzialny za usunięcie zadania\\
+Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie istnieje zadanie nalezące do projektu.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Brak zadania w systemie.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera interesujący go projekt.
+\item System wyświetla listę zadań należących do projektu.
+\item Aktor wybiera usunięcie zadania.
+\item System wyświetla komunikat w celu potwierdzenia usunięcia.
+\item Aktor zatwierdza wybór.
+\item System zwraca widok projektu bez usuniętego zadania.
+\end{enumerate}
+Scenariusz alternatywny - brak potwierdzenia usunięcia zadania: 
+\begin{enumerate}
+\item Jak a-d jak w scenariuszu głównym
+\item Aktor nie zatwierdza wyboru.
+\item System zwraca poprzedni widok projektu.
+\end{enumerate}
+
+\item Logowanie czasu pracy \\
+Nazwa: UC12 Logowanie czasu pracy\\
+Opis: Proces zalogowania informacji o tym, czym zajmował się pracownik, kiedy to robił i ile czasu na to poświęcił \\
+Aktorzy: Pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item Brak zalogowanych informacji z danego dnia, w zadaniu mogą istnieć logi z innych dat, bądź innych użytkowników.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Zalogowane w odpowiednim zadaniu informacje.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera projekt.
+\item System wyświetla listę zadań należących do projektu.
 \item Aktor wybiera zadanie do którego chce dodać loga.
+\item System wyświetla listę logów należących do zadania.
 \item Aktor wybiera dodanie nowego loga.
 \item System wyświetla formularz z pustymi polami (czas pracy, opis, data początkowa, data końcowa)
 \item Aktor uzupełnia puste pola i zatwierdza.
-\item System zwraca nowy widok gdzie pojawia się nowo wprowadzony log z widoczną nazwą użytkownika, którego dotyczy..
+\item System zwraca nowy widok gdzie pojawia się nowo wprowadzony log z widoczną nazwą użytkownika, którego dotyczy.
 \end{enumerate}
-Scenariusz alternatywny - podanie błędnych danych: 
+Scenariusz alternatywny - podanie błędnych danych w logu: 
 \begin{enumerate}
-\item a-d jak w scenariuszu głównym
+\item Jak a-g jak w scenariuszu głównym
 \item System wyświetla informacje o błędzie
 \item Aktor wprowadza prawidłowe dane
-\item jak e w scenariuszu głównym
+\item Jak h w scenariuszu głównym
+\end{enumerate}
+
+\item Modyfikacja loga z czasem pracy \\
+Nazwa: UC13 Modyfikacja loga z czasem pracy \\
+Opis: Proces modyfikacji logowania.\\
+Aktorzy: Pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item Istnieje log w systemie.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie istnije zmodyfikowany log.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera projekt.
+\item System wyświetla listę zadań należących do projektu.
+\item Aktor wybiera zadanie.
+\item System wyświetla listę logów należących do zadania.
+\item Aktor wybiera modyfikację loga.
+\item System wyświetla formularz z treścią loga.
+\item Aktor zmienia pola i zatwierdza.
+\item System zwraca nowy widok gdzie pojawia się zmodyfikowany log z widoczną nazwą użytkownika, którego dotyczy.
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych w logu: 
+\begin{enumerate}
+\item Jak a-g jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item System zwraca poprzedni widok zadania.
+\end{enumerate}
+
+\item Usunięcie loga z czasem pracy \\
+Nazwa: UC14 Usunięcie loga z czasem pracy \\
+Opis: Proces usunięcia loga z czasem pracy \\
+Aktorzy: Pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item W systemie istnieje log z czasem pracy.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item W systemie nie istnieje log z czasem pracy.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera projekt.
+\item System wyświetla listę zadań należących do projektu.
+\item Aktor wybiera zadanie.
+\item System wyświetla listę logów należących do zadania.
+\item Aktor wybiera usunięcie loga.
+\item System wyświetla komunikat w celu potwierdzenia usunięcia.
+\item Aktor zatwierdza wybór.
+\item System zwraca widok zadania bez usuniętego loga.
+\end{enumerate}
+Scenariusz alternatywny - brak potwierdzenia usunięcia loga: 
+\begin{enumerate}
+\item Jak a-d jak w scenariuszu głównym
+\item Aktor nie zatwierdza wyboru.
+\item System zwraca poprzedni widok zadania.
 \end{enumerate}
 
 \end{enumerate}
