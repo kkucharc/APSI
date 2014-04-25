@@ -145,4 +145,32 @@ Scenariusz alternatywny - wykrycie pętli:
 \item System wyświetla informacje o błędzie
 \end{enumerate}
 
+\item Zalogowanie czasu pracy przez pracownika \\
+Nazwa: UC6 Zalogowanie czasu pracy przez pracownika \\
+Opis: Proces dodania informacji o tym, czym zajmował się pracownik, kiedy to robił i ile czasu na to poświęcił \\
+Aktorzy: Pracownik techniczny \\
+Warunki początkowe:
+\begin{itemize}
+\item Brak zalogowanych informacji z danego dnia, mogą istnieć logi z innych dat, bądź innych użytkowników.
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Zalogowane w odpowienim zadaniu informacje.
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera zadanie do którego chce dodać loga.
+\item Aktor wybiera dodanie nowego loga.
+\item System wyświetla formularz z pustymi polami (czas pracy, opis, data początkowa, data końcowa)
+\item Aktor uzupełnia puste pola i zatwierdza.
+\item System zwraca nowy widok gdzie pojawia się nowo wprowadzony log z widoczną nazwą użytkownika, którego dotyczy..
+\end{enumerate}
+Scenariusz alternatywny - podanie błędnych danych: 
+\begin{enumerate}
+\item a-d jak w scenariuszu głównym
+\item System wyświetla informacje o błędzie
+\item Aktor wprowadza prawidłowe dane
+\item jak e w scenariuszu głównym
+\end{enumerate}
+
 \end{enumerate}
