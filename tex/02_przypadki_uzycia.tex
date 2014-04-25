@@ -1,1 +1,148 @@
 \section{Przypadki użycia}
+Wszelkie przypadki użycia posiadają warunek poprawnego przejścia scenariusza pierwszego (UC1 Autoryzacja użytkownika).
+\begin{enumerate}
+\item Autoryzacja użytkownika \\
+Nazwa: UC1 Autoryzacja użytkownika \\
+Opis: Proces logowania się pracownika \\
+Aktorzy: Uzytkownik \\
+Warunki początkowe: 
+\begin{itemize}
+\item Istniejące konto w systemie 
+\end{itemize}
+Warunki końcowe: 
+\begin{itemize}
+\item Dostęp do systemu 
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wprowadza swoje login i hasło
+\item System sprawdza zapytanie
+\item System wyświetla ekran powitalny
+\end{enumerate}
+Scenariusz alternatywny - błędne dane: 
+\begin{enumerate}
+\item Aktor wprowadza swoje login i hasło
+\item System uznaje zapytanie za błędne
+\item System wyświetla ekran informujacy o błędnym loginie lub haśle
+\end{enumerate}
+
+\item Dodanie/edycja profilu użytkownika
+Nazwa: UC2 Dodanie/edycja profilu użytkownika \\
+Opis: Proces dodania/edycji profilu dla pracownika \\
+Aktorzy: HR \\
+Warunki początkowe:
+\begin{itemize}
+\item Dokument z informacjami dotyczącymi pracownika
+\end{itemize}
+Warunki końcowe: 
+\begin{itemize}
+\item Uaktualniony profil pracownika
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor otwiera formularz profilu pracownika
+\item Aktor uzupełnia/zmienia wybrane pola
+\item Aktor potwierdza zmiany odpowiednim przyciskiem
+\item System zapisuje w bazie danych nowe dane
+\item System wyświetla ekran poglądowy z nowym profilem użytkownika
+\end{enumerate}
+Scenariusz alternatywny - walidacja danych: 
+\begin{enumerate}
+\item a-c jak w scenariuszu głównym
+\item System wykrywa błędnie wpisane dane 
+\item System zwraca formularz z zaznaczonymi błędnymi polami
+\end{enumerate}
+Scenariusz alternatywny - utrata łączności: 
+\begin{enumerate}
+\item a-c jak w scenariuszu głównym
+\item System ma problem z łącznością 
+\item System wyświetla formularz, wraz z informacją o nie zapisaniu danych spowodowanych problemem łączności
+\end{enumerate}
+Scenariusz alternatywny - kolizja transakcji: 
+\begin{enumerate}
+\item a-c jak w scenariuszu głównym
+\item System wykrywa błąd transakcji (np. zakleszczenie)
+\item System wyświetla formularz, wraz z prośbą o ponowienie zapytania
+\end{enumerate}
+
+\item Usuwanie profilu użytkownika
+Nazwa: UC3 Usuwanie profilu użytkownika \\
+Opis: Proces usuwania profilu dla pracownika \\
+Aktorzy: HR lub Administrator \\
+Warunki początkowe:
+\begin{itemize}
+\item Informacja o koncie do usunięcia
+\end{itemize}
+Warunki końcowe: 
+\begin{itemize}
+\item Zauktualizowana baza danych pozbawiona nieporządanego konta
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor otwiera listę użytkowników
+\item Aktor wybiera opcje usunięcie konta przy nazwisku
+\item System usuwa rekord z informacjami o użytkowniku
+\item System wyświetla nową listę użytkowników
+\end{enumerate}
+Scenariusz alternatywny - błąd usuwania: 
+\begin{enumerate}
+\item a-b jak w scenariuszu głównym
+\item System wykrywa błęd podczas usuwania rekordu
+\item System zwraca pierwotną listę z informacją z błędem usuwania
+\end{enumerate}
+
+\item Zmiana praw dostępu \\
+Nazwa: UC4 Zmiana praw dostępu \\
+Opis: Proces zmiany uprawnień użytkownika do określonych modułów. \\
+Aktorzy: Administrator \\
+Warunki początkowe:
+\begin{itemize}
+\item Dotychczas nadane prawa 
+\end{itemize}
+Warunki końcowe: 
+\begin{itemize}
+\item Uaktualniony profil z nowymi rolami
+\end{itemize}
+Scenariusz główny: 
+\begin{enumerate}
+\item Aktor wybiera z listy edytowane konto użytkownika
+\item System wyświetla detale profilu użytkownika
+\item Aktor wybiera odpowiednią opcję ról i zatwierdza
+\item System zmienia rekord dotyczący ról dla danego konta
+\item System zwraca widok profilu użytkowanika z nowymi prawami dostępu
+\end{enumerate}
+Scenariusz alternatywny - błąd zmiany : 
+\begin{enumerate}
+\item a-c jak w scenariuszu głównym
+\item System wykrywa kolizję lub bład połączenia
+\item System wyświetla detale profilu użytkownika wraz z kodem błędu, który wystąpił
+\end{enumerate}
+
+\item Edycja zwierzchnictwa \\
+Nazwa: UC5 Edycja zwierzchnictwa \\
+Opis: Proces zmiany hierarchii drzewa struktury firmy. \\
+Aktorzy: Administrator, HR lub kierownik projektu \\
+Warunki początkowe:
+\begin{itemize}
+\item Dokument dotyczący hierarchii firmy
+\end{itemize}
+Warunki końcowe:
+\begin{itemize}
+\item Uaktualnione drzewo hierarchii w systemie 
+\end{itemize}
+Scenariusz główny:
+\begin{enumerate}
+\item Aktor wybiera z listy edytowane konto użytkownika
+\item System wyświetla detale profilu użytkownika
+\item Aktor wybiera użytkownika który ma być zwierzchnikiem dla edytowanego użytkownika
+\item System zmienia rekord dotyczący zwierzchnika
+\item System zwraca nowy widok profilu użytkowanika
+\end{enumerate}
+Scenariusz alternatywny - wykrycie pętli: 
+\begin{enumerate}
+\item a-c jak w scenariuszu głównym
+\item System wykrywa pętle w drzewie hierarchii
+\item System wyświetla informacje o błędzie
+\end{enumerate}
+
+\end{enumerate}

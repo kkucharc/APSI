@@ -1,29 +1,54 @@
 \subsection{Wymagania niefunkcjonalne}
-
-\begin{tabular}{|c|c|c|c|}
+System ma zapewniać:
+\newline
+\begin{tabularx}{\textwidth}{|c|X|X|c|}
 \hline 
 Lp. & Nazwa & Opis & Priorytet \\ 
 \hline 
-NF1 & • & • & • \\ 
+\multicolumn{4}{|c|}{Bezpieczeństwo}\\
+\hline
+NF001 & Uwierzytelnienie użytkowników & W celach autoryzacji użytkownika jest niezbędne zastosowanie mechanizmów z wykorzystaniem prokołu zabezpieczającego połączenie (np. SSL). & Wysoki \\ 
 \hline 
-NF2 & • & • & • \\ 
+NF002 & Brak możliwości dostępu osób nie autoryzowanych & Podział ról (np. administrator) ma zapewniać zestaw odpowiednich uprawnień, dzięki którym użytkownik może dostać się do modułów systemu zgodnych z jego kompetencjami. & Wysoki \\ 
 \hline 
-NF3 & • & • & • \\ 
+NF003 & Możliwość skorzystania z aplikacji przy korzystaniu jedynie z sieci lokalnej firmy & Brak możliwości skorzstania z aplikacji, poza placówką firmy (nie dotyczy korzystania z usługi VPN). & Wysoki \\ 
 \hline 
-NF3 & • & • & • \\ 
+NF004 & Wymaganie od użytkownika stosowania złożonych haseł & Użytkownik w celu zachowania bezpieczeństwa swojego konta oraz danych systemu ma używać haseł złożonych z minimum 8 znaków, w których skład wchodzą duże i małe litery, oraz liczby. & Wysoki \\ 
 \hline 
-NF4 & • & • & • \\ 
+NF005 & Szyfrowanie danych w bazie & W razie sytuacji ataku i kradzieży danych należy zapewnić aby baza z poufnymi danymi użytkowników nie była rozszyfrowywalna przez osoby postronne. & Wysoki \\ 
 \hline 
-NF5 & • & • & • \\ 
+NF006 & Przechowywanie informacji (logów) dotyczących użytkowania systemu & Prowadzenie dzienników daje możliwość wglądu w opatrzony dokładnymi datami spis działań na systemie i jego środowisku (np. czas użytkowania, adresy ip). Dzięki temu w razie ataku możliwe jest odtworzenie towarzyszących zdarzeń. & Średni \\ 
 \hline 
-NF6 & • & • & • \\ 
+\multicolumn{4}{|c|}{Dostępność}\\
 \hline 
-NF7 & • & • & • \\ 
+NF107 & System ma być dostępny dla użytkowników w czasie godzin pracy zgodnych z ustalonymi normami & System powinien być dostępny w godzinach pracy, oraz poza nimi (w przypadku dodatkowych terminów, lub nienormowanego czasu pracy). System może być niedostępny 3 dni w skali roku - ze względu z zaplanowanymi pracami (utrzymanie, aktualizacja) oraz czasu reakcji na awarie, z preferencją na noce i dni wolne od pracy. & Wysoki \\ 
 \hline 
-NF9 & • & • & • \\ 
+NF108 & System powinien zapewniać szybką reakcję na działania użytkownika & System powinien reafować w ciągu 5 sekund na działania użytkownika (poza obciążającymi zadaniami jak np. generacja raportów). & Średni \\ 
 \hline 
-NF10 & • & • & • \\ 
+\multicolumn{4}{|c|}{Reakcja na awarie}\\
 \hline 
-NF11 & • & • & • \\ 
+NF209 & Tworzenie wersji zapasowych & System powinien zapewniać cotygodniowe, automatyczne tworzenie bacupów, oraz możliwość przywrócenia wersji zapasowej  & Wysoki \\ 
 \hline 
-\end{tabular}
+NF210 & Krytyczne sytuacje awaryjne powinny być automatycznie przechwytywane & Wszelkie błędy działania systemu powinny być automatycznie wykrywane i przekazywane do administratora systemu & Wysoki \\  
+\hline 
+\multicolumn{4}{|c|}{Skalowalność}\\
+\hline 
+NF311 & Możliwość obsłużenia wzrastającej ilości użytkowników i projektów & W ramach rozwoju formy system powinien być przygotowany na posiadanie zwiększonej ilości danych o pracownikach oraz nowych projektach & Wysoki \\ 
+\hline 
+NF312 & Możliwość obsłużenia dużej ilości zapytań & Przy rozwoju firmy ilość zapytań od użytkowników będzie wzrastać - responsywność systemu powinna zostać zachowana w granicach założonych limitów czasowych & Średni \\ 
+\hline 
+NF313 & Możliwość rozwoju systemu & System ma dawać możliwość dołączania nowych funkcjonalnych modułów & Wysoki \\ 
+\hline
+\multicolumn{4}{|c|}{Ograniczenia systemu}\\
+\hline
+NF414 & Udostępnienie usługi dla ilości użytkowników i projektów zgodnie z dostarczonymi zasobami & Zgodnie z ustaloną wielkością zasobów system powinien obsłużyć odpowiadającą ilość profili użytkowników, oraz projektów & Wysoki \\ 
+\hline
+\multicolumn{4}{|c|}{Użytkowanie}\\
+\hline
+NF515 & Dostarczenie intuicyjnego interfejsu użytkownika & System powinien być przeżysty i intuicyjny, nawet dla nowych użytkowników & Średni \\ 
+\hline
+NF516 & Łatwe poznanie dodatkowych funkcjonalności & Poznanie wszelkich bardziej skomplikowanych funkcjonalności, oraz przedstawienie systemu dla mnie obeznanych z podobnymi technologiami pracowników, powinno być możliwe dzięki około godzinnego kursu & Niski \\ 
+\hline
+NF516 & Dostęp ze standardowej przeglądarki & System powinien być dostępny i prawidłowo działać przy użyciu jednej z trzech standardowych przeglądarek (Chrome, Firefox, Opera) & Średni \\ 
+\hline
+\end{tabularx}
