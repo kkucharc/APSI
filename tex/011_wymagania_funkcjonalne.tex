@@ -5,34 +5,59 @@ Głównym zadaniem systemu jest wsparcie zarządzania projektami pod kątem:
 \hline 
 Lp. & Nazwa & Opis & Priorytet \\ 
 \hline 
-F1 & Tworzenie zespołów & • & Wysoki \\ 
+\multicolumn{4}{|c|}{\textbf{Zarządzanie personelem}} \\
 \hline 
-F2 & Zarządzanie zespołami & • & Wysoki \\ 
+F001 & Uwierzytelnianie & Aplikacja umożliwia uwierzytelnianie osób korzystających z systemu  & Wysoki \\ 
 \hline 
-F3 & Dodwanie pracowników & • & Wysoki \\ 
+F002 & Zarządzanie uprawnieniami & System umożliwia tworzenie kont z różnymi poziomami uprawnień & Wysoki \\ 
 \hline 
-F3 & Zarządzanie/edycja profilów pracowników & Możliwość uzupełnienia profilu pracownika o dodatkowe doświadczenia & • \\ 
+F003 & Walidacja poziomu uprawnień & System dostosowuje widoczne dla użytkownika opcje w zależności od poziomu uprawnień użytkownika  & Wysoki \\ 
 \hline 
-F4 & Alokacja pracowników & Przypisywanie pracowników do zespołów projektowych & Wysoki \\ 
+F004 & Zarządzanie pracownikami & System umożliwia dodawanie usuwanie i modyfikację kont pracowników. W ramach konta jednego pracownika system umożliwia wprowadzenie: \newline
+- danych personalnych \newline
+- kwalifikacji \newline
+- historii zatrudnienia \newline 
+- stawki \newline
+- informacji o stanowisku
+& Wysoki \\
 \hline 
-F5 & Tworzenie harmonogramów & • & Wysoki \\ 
+F005 & Zarządzanie strukturą organizacyjną firmy & Program umożliwia przeglądanie zależności stanowisk-owych pracowników firmy. System umożliwia tworzenie, usuwanie i modyfikacje elementów tak rozumianej struktury firmy. & Wysoki \\ 
 \hline 
-F6 & Zarządzanie harmonogramami & • & Wysoki \\ 
+F006 & Zarządzanie czasem pracy pracowników & System umożliwia tworzenie raportów przez pracownika dotyczących przepracowanego czasu na poszczególnych zadaniach. W szczególności system umożliwia wprowadzenie informacji o stanie zaawansowania prac nad zadaniem którego dotyczy raport. & Wysoki \\ 
 \hline 
-F7 & • & • & • \\ 
+\multicolumn{4}{|c|}{\textbf{Zarządzanie projektami}} \\
 \hline 
-F9 & • & • & • \\ 
+F101 &  Tworzenie projektu & System umożliwia tworzenie i usuwanie projektów. System umożliwia wprowadzenie oraz modyfikację danych projektu np. status projektu. & Wysoki \\ 
+\hline
+F102 & Terminarz projektu & Dla każdego projektu system umożliwia tworzenie usuwanie i modyfikację terminarza projektu & Wysoki \\
 \hline 
-F10 & • & • & • \\ 
+F103 & Definiowanie zadań & Dla każdego projektu system umożliwia dodanie i usunięcie zadania. System umożliwia także modyfikowanie danych zadania np. nazwa zadania, opis zadania & Wysoki \\ 
 \hline 
-F11 & • & • & • \\ 
+F104 & Wymagania projektu & System umożliwia przypisanie do projektu kwalifikacji które musi posiadać zespół, aby można wykonać zaplanowaną pracę . & Wysoki \\ 
 \hline 
+F105 & Wyszukiwanie członków zespołów & System umożliwia wyszukanie pracowników o odpowiednich kwalifikacjach. Dla każdego znalezionego pracownika system pokazuje informacje o aktualnym obciążeniu pracownika& Wysoki \\ 
+\hline 
+F106 & Alokacja pracowników do projektów & System umożliwia przypisanie pracownika do projektu. & Wysoki \\ 
+\hline 
+F107 & Obciążenie pracowników & System udostępnia informacje o obciążeniu każdego z pracowników, czyli w nad jakimi projektami pracuje, oraz na jaki czas pracownik został 'zarezerwowany' w związku z danym projektem & Wysoki \\ 
+\hline 
+F108 & Zarządzanie kosztami projektów & System umożliwia: \newline
+- definiowanie kosztów poszczególnych pracowników \newline
+- zatwierdzanie raportów czasu pracy pracowników. & Wysoki \\
+\hline
+\multicolumn{4}{|c|}{\textbf{Monitorowanie statusu projektów}} \\
+\hline 
+F201 & Monitorowanie kosztów & System automatycznie informuje o przekroczeniu planowanych kosztów zadań lub całego projektu & Wysoki \\ 
+\hline 
+F202 & Zaawansowanie pracy & System automatycznie określa stan prac na podstawie danych podanych w raportach pracowników & Wysoki \\
+\hline 
+F203 & Podgląd zaawansowania pracy & Program pozwala na podgląd zaawansowania prac nad całym projektem oraz w rozbiciu na poszczególne zadania & Wysoki \\
+\hline 
+\multicolumn{4}{|c|}{\textbf{Zarządzanie systemem}} \\
+\hline 
+F301 & Generowanie profili & Program pozwala generować profile umiejętności kandydatów.  & Średni \\ 
+\hline
+F302 & Archiwizacja danych & System umożliwia archiwizacje danych związanych z projektami & Średni \\ 
+\hline
 \end{tabularx} 
-\begin{enumerate}
-\item planowania i śledzenia czasu pracy pracowników firmy,
-\item definiowania i raportowania kosztów projektów,
-\item zarządzania dostępnym czasem pracowników,
-\item przechowywaniem profili pracowników i możliwość ich wygodnego przeglądania i przeszukiwania,
-\item definiowania struktury firmy (menadżerowie i podwładni),
-\item monitorowania postępów projektów.
-\end{enumerate}
+
