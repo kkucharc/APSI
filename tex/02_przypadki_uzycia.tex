@@ -121,7 +121,7 @@ Scenariusz alternatywny - błąd zmiany :
 \subsection{Edycja zwierzchnictwa}
 Nazwa: UC5 Edycja zwierzchnictwa \\
 Opis: Proces zmiany hierarchii drzewa struktury firmy. \\
-Aktorzy: Administrator, HR lub kierownik projektu \\
+Aktorzy: Administrator lub HR \\
 Warunki początkowe:
 \begin{itemize}
 \item Dokument dotyczący hierarchii firmy
@@ -230,7 +230,7 @@ Scenariusz alternatywny - brak potwierdzenia:
 \subsection{Tworzenie zadania}
 Nazwa: UC9 Tworzenie zadania\\
 Opis: Proces odpowiedzialny za tworzenie zadania\\
-Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Aktorzy: Kierownik projektu \\
 Warunki początkowe:
 \begin{itemize}
 \item W systemie nie ma informacji o zadaniu, należącym do projektu.
@@ -259,7 +259,7 @@ Scenariusz alternatywny - podanie błędnych danych zadania:
 \subsection{Modyfikacja zadania}
 Nazwa: UC10 Modyfikacja zadania\\
 Opis: Proces odpowiedzialny za modyfikację zadania\\
-Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Aktorzy: Kierownik projektu \\
 Warunki początkowe:
 \begin{itemize}
 \item W systemie istnieje zadanie należące do projektu.
@@ -288,7 +288,7 @@ Scenariusz alternatywny - podanie błędnych danych zadania modyfikowanego:
 \subsection{Usunięcie zadania}
 Nazwa: UC11 Usunięcie zadania\\
 Opis: Proces odpowiedzialny za usunięcie zadania\\
-Aktorzy: Kierownik projektu, bądź pracownik techniczny \\
+Aktorzy: Kierownik projektu \\
 Warunki początkowe:
 \begin{itemize}
 \item W systemie istnieje zadanie należące do projektu.
@@ -316,7 +316,7 @@ Scenariusz alternatywny - brak potwierdzenia usunięcia zadania:
 \subsection{Logowanie czasu pracy}
 Nazwa: UC12 Logowanie czasu pracy\\
 Opis: Proces zalogowania informacji o tym, czym zajmował się pracownik, kiedy to robił i ile czasu na to poświęcił \\
-Aktorzy: Pracownik techniczny \\
+Aktorzy: Pracownik \\
 Warunki początkowe:
 \begin{itemize}
 \item Brak zalogowanych informacji z danego dnia, w zadaniu mogą istnieć logi z innych dat, bądź innych użytkowników.
@@ -548,7 +548,7 @@ Scenariusz alternatywny - wniosek nieprzyznany:
 \subsection{Generowanie raportu dotyczącego pracownika}
 Nazwa: UC20 Generowanie raportu dotyczącego pracownika \\
 Opis: Generowanie raportu dotyczącego pracownika \\
-Aktorzy: Kierownik projektu \\
+Aktorzy: Kierownik projektu, HR \\
 Warunki początkowe:
 \begin{itemize}
 \item W systemie znajdują się logi umieszczone w zadaniach
@@ -620,3 +620,9 @@ Scenariusz główny:
 \item System wyświetla standardowy widok.
 \end{enumerate}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{diagramy/usecases/usecases.png}
+    \caption{Diagram przypadków użycia}
+    \label{fig:usecase}
+\end{figure}
