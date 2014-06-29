@@ -1,5 +1,12 @@
 \documentclass[12pt, a4paper]{article}
 
+\usepackage{changepage,titlesec}
+
+\titleformat{\section}[block]{\bfseries\LARGE}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\bfseries\normalsize}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\bfseries\normalsize}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsection} {2em}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection} {5em}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \usepackage[T1]{fontenc}
 \usepackage{style}
@@ -9,6 +16,9 @@
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{float}
 \usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+
 \newcommand{\sectionbreak}{\clearpage}
 
 \pdfadjustspacing=4
@@ -23,6 +33,7 @@
 	\include{./tex/01_analiza_wymagan}
 	\include{./tex/02_przypadki_uzycia}
 	\include{./tex/03_definicja_architektury}
+	\include{./tex/04_interfejsy}
 \end{document}
 
 
