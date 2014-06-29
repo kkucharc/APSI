@@ -1,34 +1,13 @@
-\subsection{Model analityczny}
-\subsubsection{Model pojęciowy}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.9]{diagramy/modelKlas/Classdiagram2.png}
-    \caption{Analityczny diagram klas - zbiór pojęć}
-    \label{fig:zbior_pojec}
-\end{figure}
-\subsubsection{Stereotypowy diagram klas}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{diagramy/modelKlas/Robustnessdiagram1.png}
-    \caption{Stereotypowy diagram klas - logika działania systemu}
-    \label{fig:logika}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{diagramy/modelKlas/Robustnessdiagram2.png}
-    \caption{Stereotypowy diagram klas - model ogólny uwzględniający sprawdzanie ról użytkownika}
-    \label{fig:ogolny}
-\end{figure}
+\subsection{Model projektowy}
+\begin{adjustwidth}{4em}{0pt}
 
-\subsection{Diagramy klas}
-
-Zdecydowaliśmy się na wzorzec architektoniczny MVC (ang. Model View Controller). 
+Podjęto decyzję użycia wzorca architektoniczny MVC (ang. Model View Controller). 
 Jego zastosowanie umożliwia łatwą modyfikowalność, któregoś z komponentów, bez                                                                                               
 konieczności zmian w pozostałych. Zgodnie z tym wzorcem w modelu zgromadzone są wszystkie dane naszego systemu. 
 Widok odpowiada za prezentację aktualnego stanu systemu użytkownikowi, a kontroler odpowiada za zmianę modelu, a także odświeżanie widoków.
 Na rysunku \ref{fig:mvc} przedstawiono trzy części wzorca MVC naszego systemu.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{diagramy/modelKlas/mvc.pdf}
     \caption{Schemat architektury systemu zgodnej ze wzorcem architektonicznym MVC}
@@ -38,7 +17,7 @@ Na rysunku \ref{fig:mvc} przedstawiono trzy części wzorca MVC naszego systemu.
 Na rysunku \ref{fig:ModelDiagramKlas} przedstawiono szczegółowy diagram klas dla modelu. Projekt składa się z zadań składających się z logów, posiadających
 treść. Każdy projekt ma kierownika projektu. Pracownik może złożyć wniosek urlopowy, a kadry się do niego ustosunkować (przyjąć bądź odrzucić).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{diagramy/modelKlas/ModelDiagramKlas}
     \caption{Diagram klas dla modelu.}
@@ -47,7 +26,7 @@ treść. Każdy projekt ma kierownika projektu. Pracownik może złożyć wniose
 
 Rysunek \ref{fig:KontrolerDiagramKlas} prezentuje diagram klas dla kontrolera. Zadaniem kontrolera jest zarządzanie: pracownikami, projektmi, zadaniami i logami.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{diagramy/modelKlas/KontrolerDiagramKlas}
     \caption{Diagram klas dla kontrolera.}
@@ -58,7 +37,7 @@ Rysunek \ref{fig:OknoDiagramKlas} przedstawia diagram klas dla okna.
 Okno jest odpowiedzialne za prezentowanie okien: logowania, raportu, zarządzania logami, zarządzania zadaniami, zarządzania projektami i pracownikami.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{diagramy/modelKlas/OknoDiagramKlas}
     \caption{Diagram klas dla okna}
@@ -66,3 +45,4 @@ Okno jest odpowiedzialne za prezentowanie okien: logowania, raportu, zarządzani
 \end{figure}
 
 Zatwierdzanie loga przez kierownika projektu, opis relacji, dodac okno zarzadzania pracownikami
+\end{adjustwidth}

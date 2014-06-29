@@ -1,7 +1,9 @@
 \section{Przypadki użycia}
+
 Wszelkie przypadki użycia posiadają warunek poprawnego przejścia scenariusza pierwszego (UC1 Autoryzacja użytkownika).
 
 \subsection{Autoryzacja użytkownika} 
+\begin{adjustwidth}{2em}{0pt}
 Nazwa: UC1 Autoryzacja użytkownika \\
 Opis: Proces logowania się pracownika \\
 Aktorzy: Użytkownik \\
@@ -25,8 +27,10 @@ Scenariusz alternatywny - błędne dane:
 \item System uznaje zapytanie za błędne
 \item System wyświetla ekran informujący o błędnym loginie lub haśle 
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Dodanie/edycja profilu użytkownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC2 Dodanie/edycja profilu użytkownika \\
 Opis: Proces dodania/edycji profilu dla pracownika \\
 Aktorzy: HR \\
@@ -64,8 +68,10 @@ Scenariusz alternatywny - kolizja transakcji:
 \item System wykrywa błąd transakcji (np. zakleszczenie)
 \item System wyświetla formularz, wraz z prośbą o ponowienie zapytania
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Usuwanie profilu użytkownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC3 Usuwanie profilu użytkownika \\
 Opis: Proces usuwania profilu dla pracownika \\
 Aktorzy: HR lub Administrator \\
@@ -90,8 +96,10 @@ Scenariusz alternatywny - błąd usuwania:
 \item System wykrywa błąd podczas usuwania rekordu
 \item System zwraca pierwotną listę z informacją z błędem usuwania
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Zmiana praw dostępu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC4 Zmiana praw dostępu \\
 Opis: Proces zmiany uprawnień użytkownika do określonych modułów. \\
 Aktorzy: Administrator \\
@@ -117,8 +125,10 @@ Scenariusz alternatywny - błąd zmiany :
 \item System wykrywa kolizję lub błąd połączenia
 \item System wyświetla detale profilu użytkownika wraz z kodem błędu, który wystąpił
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Edycja zwierzchnictwa}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC5 Edycja zwierzchnictwa \\
 Opis: Proces zmiany hierarchii drzewa struktury firmy. \\
 Aktorzy: Administrator lub HR \\
@@ -144,8 +154,10 @@ Scenariusz alternatywny - wykrycie pętli:
 \item System wykrywa pętle w drzewie hierarchii
 \item System wyświetla informacje o błędzie
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Tworzenie projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC6 Tworzenie projektu\\
 Opis: Proces odpowiedzialny za tworzenie projektu\\
 Aktorzy: Kierownik projektu \\
@@ -171,8 +183,10 @@ Scenariusz alternatywny - podanie błędnych danych projektu:
 \item Aktor wprowadza prawidłowe dane
 \item Jak d w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Modyfikacja projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC7 Modyfikacja projektu\\
 Opis: Proces odpowiedzialny za modyfikację projektu\\
 Aktorzy: Kierownik projektu \\
@@ -198,9 +212,11 @@ Scenariusz alternatywny - podanie błędnych danych modyfikowanego projektu:
 \item Aktor wprowadza prawidłowe dane
 \item Jak d w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 
 \subsection{Usunięcie projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC8 Usunięcie projektu\\
 Opis: Proces odpowiedzialny za usunięcie projektu\\
 Aktorzy: Kierownik projektu \\
@@ -225,9 +241,11 @@ Scenariusz alternatywny - brak potwierdzenia:
 \item Aktor nie potwierdza usunięcia.
 \item Jak d w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 
 \subsection{Tworzenie zadania}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC9 Tworzenie zadania\\
 Opis: Proces odpowiedzialny za tworzenie zadania\\
 Aktorzy: Kierownik projektu \\
@@ -255,8 +273,10 @@ Scenariusz alternatywny - podanie błędnych danych zadania:
 \item Aktor wprowadza prawidłowe dane
 \item Jak f w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Modyfikacja zadania}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC10 Modyfikacja zadania\\
 Opis: Proces odpowiedzialny za modyfikację zadania\\
 Aktorzy: Kierownik projektu \\
@@ -284,8 +304,10 @@ Scenariusz alternatywny - podanie błędnych danych zadania modyfikowanego:
 \item Aktor wprowadza prawidłowe dane
 \item Jak f w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Usunięcie zadania}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC11 Usunięcie zadania\\
 Opis: Proces odpowiedzialny za usunięcie zadania\\
 Aktorzy: Kierownik projektu \\
@@ -312,8 +334,10 @@ Scenariusz alternatywny - brak potwierdzenia usunięcia zadania:
 \item Aktor nie zatwierdza wyboru.
 \item System zwraca poprzedni widok projektu.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Logowanie czasu pracy}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC12 Logowanie czasu pracy\\
 Opis: Proces zalogowania informacji o tym, czym zajmował się pracownik, kiedy to robił i ile czasu na to poświęcił \\
 Aktorzy: Pracownik \\
@@ -343,8 +367,10 @@ Scenariusz alternatywny - podanie błędnych danych w logu:
 \item Aktor wprowadza prawidłowe dane
 \item Jak h w scenariuszu głównym
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Modyfikacja loga z czasem pracy}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC13 Modyfikacja loga z czasem pracy \\
 Opis: Proces modyfikacji logowania.\\
 Aktorzy: Pracownik techniczny \\
@@ -374,8 +400,10 @@ Scenariusz alternatywny - podanie błędnych danych w logu:
 \item Aktor wprowadza prawidłowe dane
 \item System zwraca poprzedni widok zadania.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Usunięcie loga z czasem pracy}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC14 Usunięcie loga z czasem pracy \\
 Opis: Proces usunięcia loga z czasem pracy \\
 Aktorzy: Pracownik techniczny \\
@@ -404,8 +432,10 @@ Scenariusz alternatywny - brak potwierdzenia usunięcia loga:
 \item Aktor nie zatwierdza wyboru.
 \item System zwraca poprzedni widok zadania.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Przypisanie pracownika do projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC15 Przypisanie pracownika do projektu \\
 Opis: Proces przypisanie pracownika do projektu \\
 Aktorzy: Kierownik projektu \\
@@ -432,8 +462,10 @@ Scenariusz alternatywny - pracownik niedostępny:
 \item System informuje że pracownik jest niedostępny.
 \item System zwraca poprzedni widok projektu.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Usunięcie pracownika z projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC16 Usunięcie pracownika z projektu \\
 Opis: Proces usunięcia pracownika z projektu \\
 Aktorzy: Kierownik projektu \\
@@ -461,8 +493,10 @@ Scenariusz alternatywny - pracownik niedostępny:
 \item Aktor nie potwierdza usunięcia.
 \item System zwraca poprzedni widok projektu.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Zatwierdzenie raportu pracownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC17 Zatwierdzenie raportu pracownika \\
 Opis: Proces zatwierdzenia raportu pracownika \\
 Aktorzy: Kierownik projektu \\
@@ -490,8 +524,10 @@ Scenariusz alternatywny - brak potwierdzenia:
 \item Aktor nie wyraża zgody na zatwierdzenie.
 \item Jak g w scenariuszu głównym.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Złożenie wniosku o urlop pracownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC18 Złożenie wniosku o urlop pracownika \\
 Opis: Złożenie wniosku o urlop pracownika \\
 Aktorzy: Pracownik techniczny \\
@@ -517,8 +553,10 @@ Scenariusz alternatywny - wniosek niepoprawny:
 \item Aktor poprawia wniosek i zatwierdza.
 \item Jak d w scenariuszu głównym.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Przyjęcie wniosku o urlop pracownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC19 Przyjęcie wniosku o urlop pracownika \\
 Opis: Przyjęcie wniosku o urlop pracownika \\
 Aktorzy: HR \\
@@ -544,8 +582,10 @@ Scenariusz alternatywny - wniosek nieprzyznany:
 \item Aktor nie zatwierdza zgody na przyznanie urlopu.
 \item System wyświetla informację, o tym, że wniosek nie został przyjęty.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Generowanie raportu dotyczącego pracownika}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC20 Generowanie raportu dotyczącego pracownika \\
 Opis: Generowanie raportu dotyczącego pracownika \\
 Aktorzy: Kierownik projektu, HR \\
@@ -572,8 +612,10 @@ Scenariusz alternatywny - brak logów dla pracownika:
 \item System wyświetla informację, o tym, że nie ma logów dla pracownika w podanym przedziale czasowym.
 \end{enumerate}
 
+\end{adjustwidth}
 
 \subsection{Generowanie raportu dotyczącego projektu}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC21 Generowanie raportu dotyczącego projektu \\
 Opis: Proces generowania raportu dotyczącego projektu \\
 Aktorzy: Kierownik projektu \\
@@ -600,8 +642,10 @@ Scenariusz alternatywny - brak logów dla projektu:
 \item System wyświetla informację, o tym, że nie ma logów dla projektu w podanym przedziale czasowym.
 \end{enumerate}
 
+\end{adjustwidth}
 
 \subsection{Ostrzeganie przed sytuacjami krytycznymi w projekcie}
+\begin{adjustwidth}{5em}{0pt}
 Nazwa: UC22 Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
 Opis: Ostrzeganie przed sytuacjami krytycznymi w projekcie \\
 Aktorzy: Kierownik projektu \\
@@ -619,6 +663,7 @@ Scenariusz główny:
 \item Aktor potwierdza przeczytanie komunikatu.
 \item System wyświetla standardowy widok.
 \end{enumerate}
+\end{adjustwidth}
 
 \subsection{Diagramy przypadków użycia}
 \begin{figure}[H]
